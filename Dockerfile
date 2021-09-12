@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y \
 	openprinting-ppds \
 	hpijs-ppds \
 	hp-ppd \
-	python-cups \
 	cups-backend-bjnp \
 && rm -rf /var/lib/apt/lists/*
 
