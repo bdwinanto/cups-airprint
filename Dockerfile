@@ -1,7 +1,7 @@
 # base image
 FROM ubuntu:21.04
 
-ENV TZ=Asia/Dubai
+ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # label with HEAD commit if given
