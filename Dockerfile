@@ -1,6 +1,9 @@
 # base image
 FROM ubuntu:21.04
 
+ENV TZ=Asia/Dubai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # label with HEAD commit if given
 ARG GIT_COMMIT=unspecified
 LABEL git_commit=$GIT_COMMIT
