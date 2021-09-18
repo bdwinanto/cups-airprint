@@ -1,5 +1,5 @@
 # base image
-FROM ubuntu:hirsuite
+FROM ubuntu:21.04
 
 # label with HEAD commit if given
 ARG GIT_COMMIT=unspecified
