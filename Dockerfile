@@ -1,5 +1,5 @@
 # base image
-FROM ubuntu:21.04
+FROM ubuntu:latest
 
 ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
 	openprinting-ppds \
 	hpijs-ppds \
 	hp-ppd \
+	python3-cups \
 	cups-backend-bjnp \
 && rm -rf /var/lib/apt/lists/*
 
