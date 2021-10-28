@@ -16,11 +16,11 @@ RUN apt-get update && apt-get install -y \
   	cups-filters \
 	hplip \
 	inotify-tools \
-	foomatic-db-compressed-ppds \
+#	foomatic-db-compressed-ppds \
 	printer-driver-all \
-	openprinting-ppds \
-	hpijs-ppds \
-	hp-ppd \
+#	openprinting-ppds \
+#	hpijs-ppds \
+#	hp-ppd \
 	python3-cups \
 	cups-backend-bjnp \
 && rm -rf /var/lib/apt/lists/*
@@ -45,3 +45,4 @@ RUN sed -i 's/Listen localhost:631/Listen 0.0.0.0:631/' /etc/cups/cupsd.conf && 
 	sed -i 's/<Location \/admin\/conf>/<Location \/admin\/conf>\n  Allow All/' /etc/cups/cupsd.conf && \
 	echo "ServerAlias *" >> /etc/cups/cupsd.conf && \
 	echo "DefaultEncryption Never" >> /etc/cups/cupsd.conf
+RUN ln -s /usr/bin/python3 /usr/bin/python
