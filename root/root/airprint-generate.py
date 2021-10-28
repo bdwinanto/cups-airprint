@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
 
-import cups, os, optparse, re, urlparse
+import cups, os, optparse, re, urllib.parse
 import os.path
 from StringIO import StringIO
 
