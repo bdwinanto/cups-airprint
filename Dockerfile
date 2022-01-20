@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install --no-install-recommends -yq \
   	cups-filters \
 	hplip \
 	inotify-tools \
+	avahi-daemon \
 	foomatic-db-compressed-ppds \
 	printer-driver-all-enforce \
 #	openprinting-ppds \
