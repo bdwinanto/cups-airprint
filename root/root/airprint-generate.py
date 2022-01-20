@@ -22,9 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
 
-import cups, os, optparse, re, urllib.parse
+import cups, os, optparse, re
+import urllib.parse as urlparse
 import os.path
-from StringIO import StringIO
+from io import StringIO
 
 from xml.dom.minidom import parseString
 from xml.dom import minidom
