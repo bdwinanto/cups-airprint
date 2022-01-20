@@ -5,19 +5,19 @@ ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # label with HEAD commit if given
-ARG GIT_COMMIT=unspecified
-LABEL git_commit=$GIT_COMMIT
+#ARG GIT_COMMIT=unspecified
+#LABEL git_commit=$GIT_COMMIT
 
 # Install the packages we need. Avahi will be included
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install --no-install-recommends -yq \
 	cups \
 	cups-pdf \
   	cups-bsd \
   	cups-filters \
 	hplip \
 	inotify-tools \
-#	foomatic-db-compressed-ppds \
-	printer-driver-all \
+	foomatic-db-compressed-ppds \
+	printer-driver-all-enforce \
 #	openprinting-ppds \
 #	hpijs-ppds \
 #	hp-ppd \
